@@ -1,0 +1,6 @@
+{
+  "name": "Matsetu (मतसेतु)",
+  "description": "Matsetu - Smart E-Voting Platform for state and national elections with live vote auditing, instant verification, and results dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

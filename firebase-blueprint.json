@@ -1,0 +1,91 @@
+{
+  "entities": {
+    "User": {
+      "collection": "matsetu_users",
+      "description": "Registered voters and administrators in Matsetu voting portal",
+      "fields": {
+        "fullName": { "type": "string" },
+        "username": { "type": "string" },
+        "email": { "type": "string" },
+        "mobile": { "type": "string" },
+        "dob": { "type": "string" },
+        "voterId": { "type": "string" },
+        "isVerified": { "type": "boolean" },
+        "verificationStatus": { "type": "string" },
+        "accountStatus": { "type": "string" },
+        "profilePhoto": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "lastLoginAt": { "type": "string" }
+      }
+    },
+    "Vote": {
+      "collection": "matsetu_votes",
+      "description": "Cast ballots with voter identity, candidate voted, election info, and cryptographic receipt tokens",
+      "fields": {
+        "electionId": { "type": "string" },
+        "electionTitle": { "type": "string" },
+        "voterId": { "type": "string" },
+        "voterName": { "type": "string" },
+        "voterEpic": { "type": "string" },
+        "candidateId": { "type": "string" },
+        "candidateName": { "type": "string" },
+        "partyName": { "type": "string" },
+        "votedAt": { "type": "string" },
+        "receiptToken": { "type": "string" },
+        "ipHash": { "type": "string" }
+      }
+    },
+    "LoginLog": {
+      "collection": "matsetu_login_logs",
+      "description": "Audit log of all voter and admin login sessions",
+      "fields": {
+        "userId": { "type": "string" },
+        "username": { "type": "string" },
+        "fullName": { "type": "string" },
+        "role": { "type": "string" },
+        "loginAt": { "type": "string" },
+        "deviceInfo": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "Election": {
+      "collection": "matsetu_elections",
+      "description": "Active and scheduled state & national elections",
+      "fields": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "startDate": { "type": "string" },
+        "endDate": { "type": "string" },
+        "status": { "type": "string" },
+        "totalVotes": { "type": "number" }
+      }
+    },
+    "Candidate": {
+      "collection": "matsetu_candidates",
+      "description": "Contesting candidates for each state election",
+      "fields": {
+        "electionId": { "type": "string" },
+        "name": { "type": "string" },
+        "partyName": { "type": "string" },
+        "partySymbol": { "type": "string" },
+        "manifesto": { "type": "string" },
+        "age": { "type": "number" },
+        "education": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "voteCount": { "type": "number" }
+      }
+    },
+    "AuditTrail": {
+      "collection": "matsetu_audit_trail",
+      "description": "Real-time ledger events including registration, logins, and votes",
+      "fields": {
+        "action": { "type": "string" },
+        "details": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "actor": { "type": "string" },
+        "type": { "type": "string" }
+      }
+    }
+  }
+}
